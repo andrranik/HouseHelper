@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xamForms:ReactiveContentPage
+    x:TypeArguments="vm:MainViewModel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xamForms="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+    xmlns:vm="clr-namespace:HouseHelper.ViewModel;assembly=HouseHelper.ViewModel"
+    x:Class="HouseHelper.Mobile.MainPage">
+
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Entry x:Name="TheTextBox" Margin="50" />
+        <ListView x:Name="TheListView"
+                  HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <!-- <StackLayout -->
+                            <!--     HorizontalOptions="FillAndExpand" -->
+                            <!--     VerticalOptions="StartAndExpand" -->
+                            <!--     Padding="15, 10, 10, 10" -->
+                            <!--     BackgroundColor="White"> -->
+                            <!-- -->
+                            <!--     <Label Text="{Binding Value}" -->
+                            <!--            FontSize="18" -->
+                            <!--            TextColor="Black" -->
+                            <!--            VerticalOptions="StartAndExpand" /> -->
+                            <!--     <Label Text="{Binding CategoryName}" -->
+                            <!--            FontSize="18" -->
+                            <!--            TextColor="Black" -->
+                            <!--            VerticalOptions="StartAndExpand" /> -->
+                            <!--     <Label Text="{Binding CurrencyShortName}" -->
+                            <!--            FontSize="18" -->
+                            <!--            TextColor="Black" -->
+                            <!--            VerticalOptions="StartAndExpand" /> -->
+                            <!-- </StackLayout> -->
+                            <StackLayout>
+                                <Grid Margin="10,5,0,5"
+                                      Padding="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="5" />
+                                        <RowDefinition Height="5" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*" />
+                                        <ColumnDefinition Width="7*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label
+                                        Grid.Column="0"
+                                        Grid.Row="0"
+                                        Grid.RowSpan="2"
+                                        Text="{Binding Value}"
+                                        VerticalTextAlignment="Center" />
+                                </Grid>
+                                <!-- <StackLayout Orientation="Horizontal" Margin="10,5,0,5"> -->
+                                <!--      -->
+                                <!--     <Label VerticalTextAlignment="Center" Text="{Binding Value}" /> -->
+                                <!--     <Label VerticalTextAlignment="Center" -->
+                                <!--            Style="{StaticResource CurrencyShortNameIncome}" -->
+                                <!--            Text="{Binding CurrencyShortName}" /> -->
+                                <!-- </StackLayout> -->
+                                <!-- <StackLayout Orientation="Horizontal" Margin="10,5,0,5"> -->
+                                <!--     <Label Text="{Binding CategoryName}" /> -->
+                                <!-- </StackLayout> -->
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</xamForms:ReactiveContentPage>
