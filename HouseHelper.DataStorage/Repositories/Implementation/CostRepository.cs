@@ -84,7 +84,7 @@ namespace HouseHelper.DataStorage.Repositories.Implementation
                     Category = category,
                     CurrencyId = currency.Id,
                     Currency = currency,
-                    Type = MoneyOperationType.Consumption,
+                    Type = MoneyOperationType.Income,
                     Date = DateTime.Now
                 });
 

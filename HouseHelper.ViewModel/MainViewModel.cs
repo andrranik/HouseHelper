@@ -30,6 +30,7 @@ namespace HouseHelper.ViewModel
                 .Subscribe();
         }
 
+
         public string TheText
         {
             get => _theText;

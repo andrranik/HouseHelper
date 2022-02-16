@@ -18,4 +18,8 @@
       <ProjectReference Include="..\HouseHelper.DataStorage\HouseHelper.DataStorage.csproj" />
       <ProjectReference Include="..\HouseHelper.Services\HouseHelper.Services.csproj" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Converters" />
+    </ItemGroup>
 </Project>

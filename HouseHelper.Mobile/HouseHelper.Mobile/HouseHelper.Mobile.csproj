@@ -17,10 +17,23 @@
         <PackageReference Include="ReactiveUI.XamForms" Version="17.1.17" />
         <PackageReference Include="Splat.Autofac" Version="14.1.17" />
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
+        <PackageReference Include="Xamarin.Forms.FontAwesome.Brand" Version="1.0.0" />
+        <PackageReference Include="Xamarin.Forms.FontAwesome.Regular" Version="1.0.0" />
+        <PackageReference Include="Xamarin.Forms.FontAwesome.Solid" Version="1.0.0" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\HouseHelper.DataStorage\HouseHelper.DataStorage.csproj" />
-      <ProjectReference Include="..\..\HouseHelper.ViewModel\HouseHelper.ViewModel.csproj" />
+        <ProjectReference Include="..\..\HouseHelper.DataStorage\HouseHelper.DataStorage.csproj" />
+        <ProjectReference Include="..\..\HouseHelper.ViewModel\HouseHelper.ViewModel.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Fonts\FontAwesomeRegular.otf" />
+        <None Remove="Fonts\FontAwesomeSolid.otf" />
+        <None Remove="Fonts\FontAwesomeBrandsRegular.otf" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Fonts" />
     </ItemGroup>
 </Project>

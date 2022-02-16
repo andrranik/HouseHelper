@@ -8,7 +8,13 @@ namespace HouseHelper.ViewModel.MappingProfiles
     {
         public ViewModelMapProfile()
         {
-            CreateMap<MoneyOperation, MoneyOperationDto>();
+            CreateMap<MoneyOperation, MoneyOperationDto>()
+                .ForMember(dest => dest.TimeStringView,
+                    opt =>
+                        opt.MapFrom(x => x.Date.ToString("t")))
+                .ForMember(dest => dest.ValueView,
+                    opt =>
+                        opt.MapFrom(x => $"{(x.Type == MoneyOperationType.Income ? "+" : "-")}{x.Value}"));
         }
     }
 }

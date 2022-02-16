@@ -6,54 +6,63 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:xamForms="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
     xmlns:vm="clr-namespace:HouseHelper.ViewModel;assembly=HouseHelper.ViewModel"
+    xmlns:solid="clr-namespace:FontAwesome.Solid;assembly=FontAwesome.Solid"
     x:Class="HouseHelper.Mobile.MainPage">
 
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Entry x:Name="TheTextBox" Margin="50" />
+        <Entry x:Name="TheTextBox" Margin="0, 50, 0, 15" />
         <ListView x:Name="TheListView"
                   HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.View>
-                            <!-- <StackLayout -->
-                            <!--     HorizontalOptions="FillAndExpand" -->
-                            <!--     VerticalOptions="StartAndExpand" -->
-                            <!--     Padding="15, 10, 10, 10" -->
-                            <!--     BackgroundColor="White"> -->
-                            <!-- -->
-                            <!--     <Label Text="{Binding Value}" -->
-                            <!--            FontSize="18" -->
-                            <!--            TextColor="Black" -->
-                            <!--            VerticalOptions="StartAndExpand" /> -->
-                            <!--     <Label Text="{Binding CategoryName}" -->
-                            <!--            FontSize="18" -->
-                            <!--            TextColor="Black" -->
-                            <!--            VerticalOptions="StartAndExpand" /> -->
-                            <!--     <Label Text="{Binding CurrencyShortName}" -->
-                            <!--            FontSize="18" -->
-                            <!--            TextColor="Black" -->
-                            <!--            VerticalOptions="StartAndExpand" /> -->
-                            <!-- </StackLayout> -->
                             <StackLayout>
-                                <Grid Margin="10,5,0,5"
+                                <Grid Margin="15,5,15,5"
                                       Padding="10">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="5" />
-                                        <RowDefinition Height="5" />
-                                    </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="3*" />
-                                        <ColumnDefinition Width="7*" />
+                                        <ColumnDefinition Width="120" />
+                                        <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
                                     <Label
-                                        Grid.Column="0"
-                                        Grid.Row="0"
-                                        Grid.RowSpan="2"
-                                        Text="{Binding Value}"
-                                        VerticalTextAlignment="Center" />
+                                        Text="{Binding ValueView}"
+                                        VerticalTextAlignment="Center"
+                                        HorizontalTextAlignment="Center" />
+                                    <StackLayout Grid.Column="1"
+                                                 Margin="0, 10, 0, 10"
+                                                 Spacing="3">
+                                        <StackLayout
+                                            Orientation="Horizontal"
+                                            Margin="0,0,0,3">
+                                            <Image>
+                                                <Image.Source>
+                                                    <solid:IconSource Icon="InfoCircle" Color="Black" Size="16" />
+                                                </Image.Source>
+                                            </Image>
+                                            <Label
+                                                Text="{Binding CategoryName}" />
+                                        </StackLayout>
+                                        <StackLayout
+                                            Orientation="Horizontal">
+                                            <Image>
+                                                <Image.Source>
+                                                    <solid:IconSource Icon="ChartPie" Color="Black" Size="16" />
+                                                </Image.Source>
+                                            </Image>
+                                        </StackLayout>
+                                        <StackLayout
+                                            Orientation="Horizontal">
+                                            <Image>
+                                                <Image.Source>
+                                                    <solid:IconSource Icon="Clock" Color="Black" Size="16" />
+                                                </Image.Source>
+                                            </Image>
+                                            <Label
+                                                Text="{Binding TimeStringView}" />
+                                        </StackLayout>
+                                    </StackLayout>
                                 </Grid>
                                 <!-- <StackLayout Orientation="Horizontal" Margin="10,5,0,5"> -->
                                 <!--      -->
